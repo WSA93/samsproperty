@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sam's Property Support</title>
+</head>
+
+<style>
+
+  @media (min-width: 576px) {
+    body {
+      background-color: #e9e8e4;
+    }
+
+    .container {
+      height: 98vh;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
+    }
+
+    #chatBox {
+      width: calc(100% - 96px);
+      height: calc(100% - 96px);
+      max-width: 700px;
+      max-height: 804px;
+      margin: 0 auto;
+      box-shadow: rgba(17, 49, 96, 0.08) 0px 8px 16px 0px, rgba(17, 49, 96, 0.06) 0px 0px 0px 1px;
+    }
+  }
+
+  @media (max-width: 575.99px) {
+
+    #chatBox {
+     height: 98vh;
+    }
+  }
+
+</style>
+
+<body>
+
+  <div class="container">
+    <div id="chatBox">
+    </div>
+  </div>
+
+
+
+  <script type="text/javascript">
+    (function (d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function () {
+        window.voiceflow.chat.load({
+          verify: { projectID: '65c0f613a2c8db2594344b30' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production',
+          render: {
+            mode: 'embedded',
+            target: document.getElementById('chatBox'),
+          },
+          autostart: false,
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+  </script>
+
+</body>
+
+</html>
