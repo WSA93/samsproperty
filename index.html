@@ -28,14 +28,13 @@
       max-width: 700px;
       max-height: 804px;
       margin: 0 auto;
-      box-shadow: rgba(17, 49, 96, 0.08) 0px 8px 16px 0px, rgba(17, 49, 96, 0.06) 0px 0px 0px 1px;
     }
   }
 
   @media (max-width: 575.99px) {
 
     #chatBox {
-     height: 98vh;
+     height: 97vh;
     }
   }
 
@@ -51,11 +50,13 @@
 
 
   <script type="text/javascript">
+
+    const key = '65c0f613a2c8db2594344b30';
     (function (d, t) {
       var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
       v.onload = function () {
         window.voiceflow.chat.load({
-          verify: { projectID: '65c0f613a2c8db2594344b30' },
+          verify: { projectID: key },
           url: 'https://general-runtime.voiceflow.com',
           versionID: 'production',
           render: {
